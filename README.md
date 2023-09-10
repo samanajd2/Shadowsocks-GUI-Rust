@@ -3,7 +3,7 @@ Shadowsocks Windows GUI in Rust, with Stream Cipher support.
 
 ## Important
 1. Edit russ.json and fill your shadowsocks server IP, pass, method...etc.
-2. put shadowsocks-gui-rust.exe and russ.json in the same place.
+2. put `shadowsocks-gui-rust.exe` and `russ.json` in the same place.
 3. Stream Ciphers Enabled (by default)
 - `plain` or `none` (No encryption, only used for debugging or with plugins that ensure transport security)
 
