@@ -1,5 +1,5 @@
 # shadowsocks-windows-gui-rust
-Shadowsocks Windows GUI in Rust, with Stream Cipher support (aes-crt, aes-ctf ... etc).
+Shadowsocks Windows GUI in Rust, with Stream Cipher support.
 
 ## Important
 1. Edit russ.json and fill your shadowsocks server IP, pass, method...etc.
