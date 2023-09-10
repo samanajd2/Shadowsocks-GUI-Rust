@@ -1,6 +1,6 @@
 [package]
 name = "russ"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = "Shadowsocks GUI"
 license = "MIT"
@@ -21,7 +21,7 @@ winapi = { version = "0.3.9", features = ["winuser", "wingdi"] }
 winreg = "0.51.0"
 
 serde = { version = "1.0.188", features = ["derive"] }
-serde_json = "1.0.105"
+serde_json = "1.0.106"
 serde_derive = "1.0.188"
 
 anyhow = "1.0.75"
@@ -34,8 +34,8 @@ tokio = { version = "1.32.0", features = ["full"] }
 shadowsocks = { git = "https://github.com/samanajd2/shadow-socks-rust.git", branch = "master" }
 shadowsocks-service = { git = "https://github.com/samanajd2/shadow-socks-rust.git", branch = "master", features = ["local"] }
 
-#shadowsocks = "1.14.1"
-#shadowsocks-service = { version = "1.14.2", features = ["local"] }
+#shadowsocks = "1.16.1"
+#shadowsocks-service = { version = "1.16.1", features = ["local"] }
 
 [build-dependencies]
 winapi = "0.3.9"
