@@ -14,6 +14,7 @@ pub struct Server {
     pub server: String,
     pub password: String,
     pub method: String,
+	pub dns: String,
     pub timeout: Option<u64>,
 }
 
