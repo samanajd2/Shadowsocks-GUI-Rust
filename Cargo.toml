@@ -31,8 +31,13 @@ log4rs = "1.3.0"
 futures = "0.3.30"
 tokio = { version = "1.40", features = ["full"] }
 
-shadowsocks = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master" }
-shadowsocks-service = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master", features = ["local"] }
+// غيَّرت هذا لأتمكن من إضافة الكراتيس مباشرةً داخل المسار ثم أبني
+# shadowsocks = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master" }
+# shadowsocks-service = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master", features = ["local"] }
+
+// وهذا هو البديل
+shadowsocks = { path = "./crates/shadowsocks" }
+shadowsocks-service = { path = "./crates/shadowsocks-service",  features = ["local"] }
 
 #shadowsocks = "1.16.1"
 #shadowsocks-service = { version = "1.16.1", features = ["local"] }
