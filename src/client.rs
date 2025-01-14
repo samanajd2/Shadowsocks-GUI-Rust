@@ -75,7 +75,7 @@ impl Client {
         };
 
         let sc = ss::config::ServerInstanceConfig::with_server_config(
-            ss::shadowsocks::ServerConfig::new(svr_addr, server.password.clone(), cipher),
+            ss::shadowsocks::ServerConfig::new(svr_addr, server.password.clone(), cipher)?
         );
 
         ssconfig.server.push(sc);
