@@ -19,7 +19,6 @@ Stream Cipher Supported:
 
 - `table`, `aes-cfb`, `aes-cfb1`, `aes-cfb8`, `aes-cfb128`, `aes-ctr`, `camellia-cfb`, `camellia-cfb1`, `camellia-cfb8`, `camellia-cfb128`, `rc4-md5`, `chacha20-ietf`.
 
-AED
 
 ### Thanks
 1. shadowsocks-rust https://github.com/shadowsocks/shadowsocks-rust
