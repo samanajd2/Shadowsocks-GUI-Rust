@@ -1,10 +1,11 @@
 [package]
-name = "Shadowsocks-GUI"
-version = "1.22.2"
-edition = "2021"
-description = "Shadowsocks GUI"
+name = "ShadowsocksRust-GUI"
+version = "1.23.4"
+edition = "2024"
+description = "ShadowsocksRust-GUI"
 license = "MIT"
 build = "build.rs"
+rust-version = "1.87"
 
 [[bin]]
 name = "russ"
@@ -17,34 +18,28 @@ path = "src/main.rs"
 native-windows-gui = "1.0.13"
 native-windows-derive = "1.0.5"
 
-winapi = { version = "0.3.9", features = ["winuser", "wingdi"] }
-winreg = "0.52.0"
+winapi = { version = "0.3", features = ["winuser", "wingdi"] }
+winreg = "0.55"
 
-serde = { version = "1.0.209", features = ["derive"] }
-serde_json = "1.0.127"
-serde_derive = "1.0.209"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_derive = "1"
 
-anyhow = "1.0.86"
-log = "0.4.22"
-log4rs = "1.3.0"
+anyhow = "1"
+log = "0.4"
+log4rs = "1"
 
-futures = "0.3.30"
-tokio = { version = "1.40", features = ["full"] }
+futures = "0.3"
+tokio = { version = "1", features = ["full"] }
 
-// غيَّرت هذا لأتمكن من إضافة الكراتيس مباشرةً داخل المسار ثم أبني
-# shadowsocks = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master" }
-# shadowsocks-service = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master", features = ["local"] }
+shadowsocks = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master" }
+shadowsocks-service = { git = "https://github.com/samanajd2/shadowsocks-rust", branch = "master", features = ["local"] }
 
-// وهذا هو البديل
-shadowsocks = { path = "./crates/shadowsocks" }
-shadowsocks-service = { path = "./crates/shadowsocks-service",  features = ["local"] }
-
-#shadowsocks = "1.16.1"
-#shadowsocks-service = { version = "1.16.1", features = ["local"] }
+icu_locid_transform_data = "1.5.1"
 
 [build-dependencies]
-winapi = "0.3.9"
-winres = "0.1.12"
+winapi = "0.3"
+winres = "0.1"
 
 [package.metadata.winres]
 OriginalFilename = "russ.exe"
