@@ -26,14 +26,14 @@ const SS_ICO: &[u8] = include_bytes!("../res/shadowsocks.ico");
 
 #[derive(Default, NwgUi)]
 pub struct App {
-    #[nwg_control(icon: Some(&data.icon), flags: "MAIN_WINDOW", size: (530, 350), position: (300, 300), title: "russ")]
+    #[nwg_control(icon: Some(&data.icon), flags: "MAIN_WINDOW", size: (530, 350), position: (300, 300), title: &format!("ShadowsocksRust-GUI {}", env!("CARGO_PKG_VERSION")))]
     #[nwg_events(OnInit: [App::init], OnResize: [App::size], OnWindowClose: [App::close], OnWindowMinimize: [App::close])]
     window: nwg::Window,
 
     #[nwg_resource(source_bin: Some(SS_ICO))]
     icon: nwg::Icon,
 
-    #[nwg_control(icon: Some(&data.icon), tip: Some("russ"))]
+    #[nwg_control(icon: Some(&data.icon), tip: Some(&format!("ShadowsocksRust-GUI {}", env!("CARGO_PKG_VERSION"))))]
     #[nwg_events(MousePressLeftDown: [App::open], MousePressRightDown: [App::show_menu], OnContextMenu: [App::show_menu])]
     tray: nwg::TrayNotification,
 
