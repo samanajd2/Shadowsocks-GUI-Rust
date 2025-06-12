@@ -11,7 +11,7 @@ Shadowsocks Windows GUI in Rust language, with Stream Cipher support.
   -----
 The primary encryption used is AEAD-cipher and AEAD-cipher-2022, but stream cipher is also supported. However, caution is advised when using it, as it is relatively less secure.
 
-Note: The security-replay-attack-detect patch, which enables detection against replay attacks, has been activated by default to protect "stream cipher".
+Note: The (security-replay-attack-detect) patch, which enables detection against replay attacks, has been activated by default to protect "stream cipher".
 .
 
 Stream Cipher Supported:
